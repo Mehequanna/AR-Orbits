@@ -55,9 +55,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             // If there is a result present using hitTest, do this.
             if let hitResult = results.first {
-                let boxScene = SCNScene(named: "art.scnassets/box.scn")!
+                let boxScene = SCNScene(named: "art.scnassets/solarSystem.scn")!
                 
-                if let boxNode = boxScene.rootNode.childNode(withName: "box", recursively: true) {
+                if let boxNode = boxScene.rootNode.childNode(withName: "solarSystem", recursively: true) {
                     boxNode.position = SCNVector3Make(hitResult.worldTransform.columns.3.x, hitResult.worldTransform.columns.3.y + 0.15, hitResult.worldTransform.columns.3.z)
                     
                     sceneView.scene.rootNode.addChildNode(boxNode)
